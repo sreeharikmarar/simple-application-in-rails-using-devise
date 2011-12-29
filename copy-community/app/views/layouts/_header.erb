@@ -1,0 +1,17 @@
+<div class="HEADER">
+	<center><h1 style="color:#990000;margin: 5px 0px;">Rails Club - Where enthusiasts meet</h1></center>
+	<div class="SHELL">
+		<div class="FLOAT_LEFT">
+			<%= link_to "Home", root_path %>
+	    </div>
+		<div class="FLOAT_RIGHT">
+		<% if current_member %>
+			Welcome <b style="color: #38761d;"><%= current_member.username || current_member.email %></b>&nbsp;|&nbsp;
+			<%= link_to "Sign Out", destroy_member_session_path, :method=>:delete %>
+		<% else %>
+			<%= link_to "Sign In", new_member_session_path(current_member) %>&nbsp;|&nbsp;
+			<%= link_to "Register", new_member_registration_path(current_member) %>
+		<% end %>
+		</div>
+	</div>
+</div>

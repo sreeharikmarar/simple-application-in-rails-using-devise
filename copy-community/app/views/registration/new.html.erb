@@ -1,0 +1,43 @@
+<h2>Sign up</h2>
+
+<%= form_tag(member_registration_path,:method => 'post') %>
+<%= devise_error_messages! %>
+  <table>
+  
+      <tr>
+      <td>Username : </td>
+      <td><%=text_field_tag "member[username]",@member.username %></td>
+      </tr>
+
+      <tr>
+      <td>Email : </td>
+      <td><%=email_field_tag "member[email]",@member.email %></td>
+      </tr>
+
+      <tr>
+      <td>Password : </td>
+      <td><%=password_field_tag "member[password]",@member.password %></td>
+      </tr>
+
+      <tr>
+      <td>Retype password : </td>
+      <td><%=password_field_tag "member[password_confirmation]",@member.password_confirmation %></td>
+      </tr>
+
+      <tr>
+      <td>Mobile : </td>
+      <td><%=text_field_tag "contact[mobile]" ,@contact.mobile %></td>
+      </tr>
+
+      <tr>
+      <td>Address : </td>
+      <td><%=text_area_tag "contact[address]" ,@contact.address ,:rows => 10, :cols => 25 %></td>
+      </tr>
+
+      <tr>
+      <td><%= submit_tag nil, :class => "form_submit" %></td>
+    </tr>
+  </table>
+
+<%= render :partial => "devise/shared/links" %>
+

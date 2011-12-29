@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Community</title>
+  <%= stylesheet_link_tag    "application" %>
+  <%= javascript_include_tag "application" %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+<body>
+	<%= render :partial=>"/layouts/header" %>
+	
+	<div class="SHELL">
+		<%= render :partial=>"/layouts/notice" %>
+		<div class="CL"></div>
+		<%= yield %>
+		<div class="CL"></div>
+	</div>
+	
+	<%= render :partial=>"/layouts/footer" %>
+
+</body>
+</html>

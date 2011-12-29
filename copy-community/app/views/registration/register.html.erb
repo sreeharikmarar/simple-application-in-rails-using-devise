@@ -1,0 +1,23 @@
+
+<% if member_signed_in? %>
+
+  
+  <h3>you have succesfully signed in</h3>
+  <%= link_to "Sign Out", destroy_member_session_path, :method => :delete %>
+  
+
+<% else %>
+
+  <h1>welcome to Ruby community<h1>
+  <table>
+  
+<tr>
+  <td><%= link_to "Sign in", new_member_session_path %></td>
+  <td>  </td>
+  <td>  </td>
+  <td>  </td>
+  <td><%= link_to "Sign up", new_member_registration_path%></td>
+  </tr>
+  </table>
+<% end %>
+

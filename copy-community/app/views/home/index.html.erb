@@ -1,0 +1,39 @@
+
+<% if member_signed_in? %>
+
+  
+  <h3>you have succesfully signed in</h3>
+  <%= link_to "Sign Out", destroy_member_session_path, :method => :delete %>
+  
+
+<% else %>
+
+  
+<h1>Rails Club</h1>
+Jan 1, 2012	sreehari k m
+<div class="CL"></div>
+
+<img src="/images/rails.png" />
+
+<p>
+I’m sreehari ,this is just small aplication created by using rails with devise,
+</p>
+<p>
+Ruby on Rails, often shortened to Rails or RoR, is an open source full-stack web application framework for the Ruby programming language. Ruby on Rails is not to be confused with Ruby, which is a general purpose programming language that Ruby on Rails runs on. It should also be noted that Ruby itself existed for more than 10 years before the first release of Ruby on Rails. Ruby on Rails is a full-stack framework, meaning, it gives the web developer the full ability to gather information from the web server, talking/querying the database, and template rendering out of the box, also, as a result, Rails features a routing system that is independent of the web server.
+</p>
+<p>
+Ruby on Rails was extracted by David Heinemeier Hansson from his work on Basecamp, a project management tool by 37signals (now a web application company).Hansson first released Ruby on Rails as open source in July 2004, but did not share commit rights to the project until February 2005. In August 2006 the framework reached a milestone when Apple announced that it would ship Ruby on Rails with Mac OS X v10.5 "Leopard", which was released in October 2007.
+</p>
+
+<p>
+In a default configuration, a model in a Ruby on Rails framework maps to a table in a database. By convention, a model named User will map to the database table users, and the model will have a filename user.rb within app/models, while developers can choose to use whatever model name and database table name they wish, this is not a common practice and it's usually discouraged because Rails philosophy is to use convention over configuration.
+</p>
+
+<p>
+A controller is the component of Rails that responds to external request from the web server to the application, and respond to the external request by determining which view file to render. The controller may also have to query the model directly for information and pass these onto the view. A controller may contain one or more actions. In Ruby on Rails, action is typically a basic unit which describing a single rule on how to respond to a specific external web-browser request. Also note that, if a controller/action is not mapped to the Rails router, the controller/action will be directly inaccessible to external web requests. By convention, Rails encourage developers to use a RESTful route which contain actions named create, new, edit, update, destroy, and index, as these are routed automatically by convention in the routes file if specified.</p>
+
+<p>
+A view typically is a erb file in the default configuration of Rails. It is typically converted to output html at run-time, although in theory any formats can be used as a view.
+</p>
+
+<% end %>
